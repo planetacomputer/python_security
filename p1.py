@@ -48,4 +48,36 @@ for i, valor in enumerate(mi_lista):
 	if not isinstance(valor, bool) and isinstance(valor, int):
 		mi_lista[i] = int(valor) + 1
 
-print(mi_lista)
+print(mi_lista[0])
+print(mi_lista[2])
+
+foods = {}
+foods["banana"] = 1
+foods["yogures"] = 8
+foods["lechuga"] = 6
+
+print(foods)
+print(foods['yogures'])
+
+#print(foods['sdfs'])
+print(foods.items())
+
+if "banandsa" in foods:
+	print("Si, aqui hay bananas")
+	print(foods["banana"])
+else:
+	print("No hemos encontrado banandsa")
+
+del foods["lechuga"]
+print(foods.items())
+print(len(foods))
+
+
+logs = []
+linea1 = {"response": "200", "date": "2010/02/07", "weight": 216}
+logs.append(linea1)
+linea2 = {"response": "200", "date": "2015/01/04", "weight": 123}
+logs.append(linea2)
+
+for linea in logs:
+    print(linea["response"] + "  -  " + linea["date"])
